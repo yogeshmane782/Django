@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,td,th{
+            border: 2px solid black;
+            width: 100%;
+        }
+        th,th{
+            text-align: left;
+            width: 50%;
+            background-color: aquamarine;
+        }
+        input[type="text"]{
+            background-color: aqua;
+        }
+        input[type='password']{
+            background-color: aqua;
+        }
+        body{
+            text-align: center;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form>
+        <table>
+            {{f1.as_table}}
+            <tr>
+                <td><input type="submit" value="Register"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<center>
+    <form action="/cart">
+        <table border="1">
+            <tr>
+                <td>ProductName</td>
+                <td><input type="text" name="pname"></td>
+            </tr>
+            <tr>
+                <td>qty</td>
+                <td><input type="text" name="qty"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="AddtoCart" name="b1"></td>
+                <td><input type="submit" value="UpdatetoCart" name="b1"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="DeletefromCart" name="b1"></td>
+                <td><input type="submit" value="ViewCart" name="b1"></td>
+            </tr>
+        </table>
+    </form>
+    {{msg}}
+</center>
+</body>
+</html>

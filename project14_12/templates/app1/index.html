@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <form action="/listview">
+        <center>
+            <table border='2' width="50%">
+                <tr>
+                    <td>Job</td>
+                    <td>
+                        <select name="job">
+                            <option value="manager">Manager</option>
+                            <option value="acc">acc</option>
+                            <option value="clerk">Clerk</option>
+                        </select>
+                    </td>
+                   
+                </tr>
+                <tr>
+                    <td><input type="submit" value="list" ></td>
+                </tr>
+            </table>
+    </center>
+    </form>
+    {%block content%}
+    {%endblock%}
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/list_temp">
+        <table>
+            <tr>
+                <td>Deptno</td>
+                <td><input type="text" name="deptno"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="display"></td>
+            </tr>
+        </table>
+        <table border="1" width="100%">
+            <tr>
+               <th>Empno</th>
+               <th>ename</th>
+               <th>Job</th>
+               <th>Salary</th>
+            </tr> 
+            {%for row in qs%}
+            <tr>
+                <td>{{row.empno}}</td>
+                <td>{{row.ename}}</td>
+                <td>{{row.job}}</td>
+                <td>{{row.salary}}</td>
+            </tr>
+            {%endfor%}
+        </table>
+    </form>
+</body>
+</html>

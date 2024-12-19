@@ -1,0 +1,18 @@
+body{
+    background-color: beige;
+    color: blue;
+ }
+ table {
+     border: 2px solid black;
+     width:100%;
+ }
+ td {
+     border: 1px solid black;
+     text-align: center;
+ }
+ img 
+ {
+     width:100px;
+     height: 100px;
+ }
+ 

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" width="100%">
+        <tr>
+            <th>Name</th>
+            <th>Subject1</th>
+            <th>Result</th>
+            <th>Subject2</th>
+            <th>Result</th>
+
+        </tr>>
+        
+            {%for name,marks in stud_data.items%}
+        <tr>
+            <td>{{name}}</td>
+            {%for s in marks%}
+               <td>{{s}}</td>
+               {%if s > 40%} 
+               <td>PASS</td>
+               {%else%}
+               <td>FAIL</td>
+               {%endif%}
+            {%endfor%}
+
+        </tr>
+        {%endfor%}
+    </table>
+</body>
+</html>

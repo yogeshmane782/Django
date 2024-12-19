@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" width="100%">
+        <tr>
+            <th>Rollno</th>
+            <th>Name</th>
+            <th>Subject1</th>
+            <th>Subject2</th>
+            <th>Result</th>
+        </tr>
+        {%for row in qs%}
+        <tr>
+            <td>{{row.rollno}}</td>
+            <td>{{row.name}}</td>
+            <td>{{row.sub1}}</td>
+            <td>{{row.sub2}}</td>
+            {%if row.sub1 >= 40 and row.sub2 >= 40 %}
+                <td>PASS</td>
+            {%else%}
+                <td>FAIL</td>
+            {%endif%}
+        </tr>
+        {%endfor%}
+    </table>
+</body>
+</html>

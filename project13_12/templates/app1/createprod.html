@@ -1,0 +1,10 @@
+{%extends "app1/index.html"%}
+{%block content%}
+<form action="" method="post">
+    {%csrf_token%}
+    <table class="table table-success table-striped-columns">
+        {{form.as_table}}
+    </table>
+    <input type="submit">
+</form>
+{%end block%}

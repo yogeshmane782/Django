@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" width="100%">
+        <tr>
+            <td>Empno</td>
+            <td>Empname</td>
+            <td>Job</td>
+            <td>Salary</td>
+        </tr>
+        {%for row in data%}
+        <tr>
+            <td>{{row.empno}}</td>
+            <td>{{row.ename}}</td>
+            <td>{{row.job}}</td>
+            <td>{{row.salary}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+    <tr>
+        <td><button><a href="/addemp_view">home</a></button></td>
+    </tr>
+</body>
+</html>

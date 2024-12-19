@@ -1,0 +1,19 @@
+{%extends "app1/index.html"%}
+{%block content%}
+<table class="table table-success table-striped">
+    <tr>
+        <th>ProductID</th>
+        <th>Product Name</th>
+        <th>Qty</th>
+        <th>Price</th>
+    </tr>
+    {%for product in products%}
+    <tr>
+        <td>{{product.proid}}</td>
+        <td>{{product.prodname}}</td>
+        <td>{{product.qty}}</td>
+        <td>{{product.price}}</td>
+    </tr>
+    {%endfor%}
+</table>
+{%endblock%}

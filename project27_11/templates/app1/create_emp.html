@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/create_emp">
+        <table>
+            <tr>
+                <td>EmpNo</td>
+                <td><input type="text" name="eno"></td>
+            </tr>
+            <tr>
+                <td>EmpName</td>
+                <td><input type="text" name="ename"></td>
+            </tr>
+            <tr>
+                <td>Job</td>
+                <td><input type="text" name="job"></td>
+            </tr>
+            <tr>
+                <td>Salary</td>
+                <td><input type="text" name="sal"></td>
+            </tr>
+            <tr>
+                <td>Deptno</td>
+                <td><input type="text" name="deptno"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Create"></td>
+            </tr>
+           
+        </table>
+        {{msg}}
+    </form>
+</body>
+</html>
