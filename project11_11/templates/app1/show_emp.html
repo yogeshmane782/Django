@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>EmployeeNo</th>
+            <th>EmployeeName</th>
+            <th>Date of Joining</th>
+        </tr>
+        {%for empno,data in emp_data.items%}
+        <tr>
+            <td>{{empno}}</td>
+            <td>{{data.0}}</td>
+            <td>{{data.1 | date:"l d F Y"}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+</body>
+</html>
