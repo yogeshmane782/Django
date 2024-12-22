@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {%for row in qs%}
+    <h2>{{row.from_user}}</h2>
+    <h2>{{row.content}}</h2>
+    {%empty%}
+    <h2>No Mails in Inbox</h2>
+    {%endfor%}
+</body>
+</html>
