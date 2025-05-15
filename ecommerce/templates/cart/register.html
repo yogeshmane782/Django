@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(245, 248, 251);
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            border-radius: 2px;
+        }
+        .form-heading{
+            display: flex;
+            justify-content: center;
+            color: green;
+            font-size: 20px;
+        }
+        .inputbox{
+            margin: 15px;
+        }
+        .inputbox input{
+            margin-top: 10px;
+            width: 100%;
+            height: 25px;
+            border-radius:4px;
+         }
+         .inputbox input:hover{
+            border: 2px solid rgb(62, 130, 247);
+            
+         }
+           
+        .user-info{
+            width: 400px;
+            height: 530px;
+            background-color: white;
+            padding: 10px;
+            box-shadow: 2px 2px 20px rgb(190, 187, 187);
+
+        }
+        .submit-btn input{
+            width: 100%;
+            background-color: blue;
+            color: white;
+            height: 25px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .container a{
+            text-decoration: none;
+        }
+        .msg{
+            background-color: rgb(175, 203, 248);
+            height: 33px;
+            border-radius: 4px;
+            display: flex;        
+            align-items: center;
+            padding-left: 16px;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="/register/" method="POST">
+            {%csrf_token%}
+            <div class="user-info">
+                <div class="form-heading"><h2>Ecommerce</h2></div>
+                <h2>Register</h2><hr>
+                {% if messages %}
+                    {% for message in messages %}                        
+                            <div class="msg">
+                                {{ message }}
+                            </div>                      
+                    {% endfor %} <!-- Close the for loop -->
+                {% endif %} <!-- Close the outer if block -->
+                <div class="inputbox">
+                    <label for="">First name</label><br>
+                    <input type="text" placeholder="Enter First name" name="first_name">
+                </div>
+                <div class="inputbox">
+                    <label for="">Last name</label><br>
+                    <input type="text" placeholder="Enter Last name" name="last_name" required>
+                </div>
+                <div class="inputbox">
+                    <label for="">Username</label><br>
+                    <input type="email" placeholder="Enter email" name="username" required>
+                </div>
+                <div class="inputbox">
+                    <label for="">Password</label><br>
+                    <input type="password" placeholder="Password" name="password" required>
+                </div>
+                <p>Already have an account <a href="/login/">Login</a></p>
+                <div class="submit-btn">
+                    <input type="submit" value="Submit">
+                </div>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
