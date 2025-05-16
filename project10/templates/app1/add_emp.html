@@ -1,0 +1,77 @@
+{% extends 'app1/home.html'%}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* body{
+        background-color: rgb(16, 178, 203);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    } */
+    
+        .container{
+        padding: 25px;
+         background-color: rgb(127, 154, 159);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        
+    }
+    .emp-info{
+        display:block;
+        
+    }
+    .emp-info label{
+        font-weight: 50;
+        margin-bottom: 5px;
+    }
+    .emp-info input{
+        width: 100%;
+        padding: 5px;
+        border-radius: 5px;
+        border-color: rgb(96, 134, 121);
+        
+    }
+    .btn{
+        width: 100%;
+        margin-top: 15px;
+        background-color: rgb(85, 85, 228);
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        padding: 5px;
+    }
+</style>
+<body>
+    <div class="container">
+        <h2>ADD Employee</h2>
+        <form action="/add">
+        <div class="emp-info">
+            <label for="">Employee Id</label>
+            <input type="text" name="emp_id" placeholder="Enter Employee Id">
+        </div>
+        <div class="emp-info">
+            <label for="">Name</label>
+            <input type="text" name="name" id="">
+        </div>
+        <div class="emp-info">
+            <label for="">Salary</label>
+            <input type="text" name="salary">
+        </div>
+        <button type="submit" class="btn">Add</button>
+        </form>
+        {{msg}}
+    </div>
+</body>
+</html>
+{%endblock content%}

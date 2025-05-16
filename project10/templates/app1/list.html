@@ -1,0 +1,38 @@
+{%extends "app1/home.html"%}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        border: 1px solid black;
+    }
+    th{
+        border: 1px solid black;
+    }
+    td{
+        border: 1px solid black;
+    }
+</style>
+<body>
+    <table width="100%">
+        <tr>
+            <th>Employee ID</th>
+            <th>Name</th>
+            <th>Salary</th>
+        </tr>
+        {%for e in employees%}
+        <tr>
+            <td>{{e.emp_id}}</td>
+            <td>{{e.emp_name}}</td>
+            <td>{{e.emp_salary}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+</body>
+</html>
+{%endblock content%}

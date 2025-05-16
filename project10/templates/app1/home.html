@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homepage</title>
+    <style>
+        nav{
+            display: flex;
+            justify-content: space-evenly;
+            background-color: antiquewhite;
+            height: 30px;
+            align-items: center;
+            padding: 15px;
+            
+        }
+        li{
+            list-style: none;
+            
+        }
+        a{
+            text-decoration: none;
+            color: rgb(134, 24, 203);
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <li><a href="/add_temp/">Add Employee</a></li>
+        <li><a href="/update/">Update Salary</a></li>
+        <li><a href="/list/">LIST</a></li>
+        <li><a href="/delete/">Delete</a></li>
+    </nav>
+    {%block content%}
+    {%endblock content%}
+</body>
+</html>
