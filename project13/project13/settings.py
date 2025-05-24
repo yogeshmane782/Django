@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'app1'
 ]
 MEDIA_ROOT=BASE_DIR/"media"
-MEDIA_URL='/media'
+MEDIA_URL='/media/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -57,7 +57,7 @@ ROOT_URLCONF = 'project13.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR/"templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
